@@ -1,4 +1,4 @@
-package com.enjoy.net;
+package SomeTest.net;
 
 
 import java.io.BufferedReader;

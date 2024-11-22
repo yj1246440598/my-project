@@ -1,7 +1,5 @@
-package com.enjoy.InputStream;
+package SomeTest.InputStream;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;

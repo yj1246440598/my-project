@@ -1,4 +1,4 @@
-package com.enjoy.InputStream;
+package SomeTest.InputStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
