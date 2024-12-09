@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.enjoy.mapper.CourseMapper">
-    <resultMap type="com.enjoy.entity.Course" id="CourseResult">
+    <resultMap type="Course" id="CourseResult">
         <result property="cid"       column="cid"       />
         <result property="cname"    column="cname"    />
         <result property="teacherId"    column="teacher_id"    />
@@ -11,4 +11,7 @@
     <select id="selectAll" resultMap="CourseResult">
         select * from course;
     </select>
+    <update id="updateById" parameterType="Course">
+        update course set cname = #{cname} where cid = #{cid};
+    </update>
 </mapper>

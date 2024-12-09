@@ -1,0 +1,70 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE configuration-->
+<!--        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-config.dtd">-->
+<!--<configuration>-->
+<!--    &lt;!&ndash;配置数据库连接数据&ndash;&gt;-->
+<!--&lt;!&ndash;    <properties resource="dataSource.properties"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <settings>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="cacheEnabled" value="true"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="lazyLoadingEnabled" value="true"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="multipleResultSetsEnabled" value="true"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="useColumnLabel" value="true"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="useGeneratedKeys" value="false"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="autoMappingBehavior" value="PARTIAL"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="defaultExecutorType" value="SIMPLE"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="defaultStatementTimeout" value="25"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="defaultFetchSize" value="100"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="safeRowBoundsEnabled" value="false"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="mapUnderscoreToCamelCase" value="true"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="localCacheScope" value="SESSION"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="jdbcTypeForNull" value="OTHER"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </settings>&ndash;&gt;-->
+<!--    &lt;!&ndash;    cacheEnabled: 全局地开启或关闭配置文件中的所有映射器已经配置的任何缓存。参数为：true | false，默认值为：true。&ndash;&gt;-->
+<!--    &lt;!&ndash;    运行原理：在同一个session中的同样类型的查询，会调用第一次查询的数据，而不会再次调用MySql语句去访问数据库。&ndash;&gt;-->
+<!--    &lt;!&ndash;    lazyLoadingEnabled：全局启用或禁用延迟加载。当禁用时，所有关联对象都会即时加载。参数为：true | false，默认值为：true。&ndash;&gt;-->
+<!--    &lt;!&ndash;    运行原理：懒加载，级联对象都不会加载，而在你需要的时候，返回数据库单独查找。&ndash;&gt;-->
+<!--    &lt;!&ndash;    aggressiveLazyLoading：当启用时，对任意延迟属性的调用会使带有延迟加载属性的对象完整加载；反之，每种属性将会按需加载。参数为：true | false，版本3.4.1 （不包含）之前 true，之后 false。&ndash;&gt;-->
+<!--    &lt;!&ndash;    multipleResultSetsEnabled：是否允许单一语句返回多结果集（需要兼容驱动）。参数为：true | false，默认值为：true。&ndash;&gt;-->
+<!--    &lt;!&ndash;    useColumnLabel：使用列标签代替列名。不同的驱动会有不同的表现，具体可参考相关驱动文档或通过测试这两种不同的模式来观察所用驱动的结果。参数为：true | false，默认值为：true。&ndash;&gt;-->
+<!--    &lt;!&ndash;    useGeneratedKeys： 允许JDBC 支持自动生成主键，需要驱动兼容。如果设置为 true，则这个设置强制使用自动生成主键，尽管一些驱动不能兼容但仍可正常工作（比如 Derby）。参数为：true | false，默认值为：true。&ndash;&gt;-->
+<!--    &lt;!&ndash;    autoMappingBehavior： 指定 MyBatis 应如何自动映射列到字段或属性。NONE 表示取消自动映射。PARTIAL 表示只会自动映射，没有定义嵌套结果集和映射结果集。FULL 会自动映射任意复杂的结果集（无论是否嵌套）。参数为：NONEPARTIAL、FULL，默认值为：PARTIAL。&ndash;&gt;-->
+<!--    &lt;!&ndash;    autoMappingUnkno wnColumnBehavior： 指定自动映射当中未知列（或未知属性类型）时的行为。 默认是不处理，只有当日志级别达到 WARN 级别或者以下，才会显示相关日志，如果处理失败会抛出 SqlSessionException 异常。参数为：NONE、WARNING、FAILING，默认值为：NONE。&ndash;&gt;-->
+<!--    &lt;!&ndash;    defaultExecutorType： 配置默认的执行器。SIMPLE 是普通的执行器；REUSE 会重用预处理语句（prepared statements）；BATCH 执行器将重用语句并执行批量更新。参数为：SIMPLE、REUSE、BATCH，默认值为：SIMPLE。&ndash;&gt;-->
+<!--    &lt;!&ndash;    defaultStatementTimeout： 设置超时时间，它决定驱动等待数据库响应的秒数。参数为：任何正整数、Not Set (null)。&ndash;&gt;-->
+<!--    &lt;!&ndash;    defaultFetchSize： 设置数据库驱动程序默认返回的条数限制，此参数可以重新设置。参数为：任何正整数、Not Set (null)。&ndash;&gt;-->
+<!--    &lt;!&ndash;    safeRowBoundsEnabled： 允许在嵌套语句中使用分页（RowBounds）。如果允许，设置 false。参数为：true | false，默认值为：false。&ndash;&gt;-->
+<!--    &lt;!&ndash;    safeResultHandlerEnabled： 允许在嵌套语句中使用分（ResultHandler）。如果允许，设置false。参数为：true | false，默认值为：true。&ndash;&gt;-->
+<!--    &lt;!&ndash;    mapUnderscoreToCamelCase： 是否开启自动驼峰命名规则映射，即从经典数据库列名 A_COLUMN 到经典 Java 属性名 aColumn 的类似映射。参数为：true | false，默认值为：false。&ndash;&gt;-->
+<!--    &lt;!&ndash;    localCacheScopeMyBatis： 利用本地缓存机制（Local Cache）防止循环引用（circular references）和加速联复嵌套査询。默认值为 SESSION，这种情况下会缓存一个会话中执行的所有查询。若设置值为 STATEMENT，本地会话仅用在语句执行上，对相同 SqlScssion 的不同调用将不会共享数据 。参数为：SESSION|STATEMENT，默认值为：SESSION。&ndash;&gt;-->
+<!--    &lt;!&ndash;    jdbcTypeForNull：当没有为参数提供特定的 JDBC 类型时，为空值指定 JDBC 类型。某些驱动需要指定列的 JDBC 类型，多数情况直接用一般类型即可，比如 NULL、VARCHAR 或 OTHER。参数为：NULL、VARCHAR、OTHER，默认值为：OTHER 。&ndash;&gt;-->
+<!--    &lt;!&ndash;    lazyLoadTriggerMethods：指定哪个对象的方法触发一次延迟加载。&ndash;&gt;-->
+<!--    &lt;!&ndash;    defaultScriptingLanguage：指定动态 SQL 生成的默认语言。&ndash;&gt;-->
+<!--    &lt;!&ndash;    callSettersOnNulls：指定当结果集中值为 null 时，是否调用映射对象的 setter（map 对象时为 put）方法，这对于 Map.kcySet() 依赖或 null 值初始化时是有用的。注意，基本类型（int、boolean 等）不能设置成 null。参数为：true | false，默认值为：false。&ndash;&gt;-->
+<!--    &lt;!&ndash;    logPrefix：指定 MyBatis 增加到日志名称的前缀 。参数为：任何字符串，默认值为：Not set。&ndash;&gt;-->
+<!--    &lt;!&ndash;    loglmpl：指定 MyBatis 所用日志的具体实现，未指定时将自动査找。参数为：SLF4J|LOG4J、LOG4J2、JDK_LOGGING、	COMMONS_LOGGING、ST DOUT_LOGGING|NO_LOGGING，默认值为：Not set。&ndash;&gt;-->
+<!--    &lt;!&ndash;    proxyFactory：指定 MyBatis 创建具有延迟加栽能力的对象所用到的代理工具。参数为：CGLIB、JAVASSIST	默认值为：JAVASSIST （MyBatis 版本为 3.3 及以上的） 。&ndash;&gt;-->
+<!--    &lt;!&ndash;    vfsImpl：指定 VFS 的实现类 。提供 VFS 类的全限定名，如果存在多个，可以使用逗号分隔 。默认值为：Not set。&ndash;&gt;-->
+<!--    &lt;!&ndash;    useActualParamName：允许用方法参数中声明的实际名称引用参数。要使用此功能，项目必须被编译为 Java 8 参数的选择。（从版本 3.4.1 开始可以使用）参数为：true | false，默认值为：true。&ndash;&gt;-->
+<!--    <typeAliases>-->
+<!--        <typeAlias type="com.enjoy.entity.Course" alias="Course"/>-->
+<!--    </typeAliases>-->
+<!--&lt;!&ndash;    <environments default="defaultEnv">&ndash;&gt;-->
+<!--&lt;!&ndash;        <environment id="defaultEnv">&ndash;&gt;-->
+<!--&lt;!&ndash;            <transactionManager type="JDBC"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <dataSource type="POOLED">&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="driverClassName" value="${driver}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="url" value="${url}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="username" value="${username}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="password" value="${password}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </dataSource>&ndash;&gt;-->
+<!--&lt;!&ndash;        </environment>&ndash;&gt;-->
+<!--&lt;!&ndash;    </environments>&ndash;&gt;-->
+<!--&lt;!&ndash;        <mappers>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;将mapper文件加载进来&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <mapper resource="mapper/CourseMapper.xml" />&ndash;&gt;-->
+<!--&lt;!&ndash;        </mappers>&ndash;&gt;-->
+
+<!--</configuration>-->

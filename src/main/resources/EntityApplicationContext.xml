@@ -1,0 +1,73 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--       http://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--       http://www.springframework.org/schema/context-->
+<!--       http://www.springframework.org/schema/context/spring-context-3.2.xsd-->
+<!--"-->
+<!--&gt;-->
+<!--    <context:component-scan base-package="SomeTest"/>-->
+
+<!--    <bean id="testEntity" class="SomeTest.spring.TestEntity">-->
+<!--        <property name="speC1">-->
+<!--            <value><![CDATA[P&G]]></value>-->
+<!--        </property>-->
+<!--        <property name="speC2">-->
+<!--            <value>P&amp;G</value>-->
+<!--        </property>-->
+<!--        <property name="aopUser">-->
+<!--            <bean class="SomeTest.aop.AopUser">-->
+<!--                <property name="name" value="1"/>-->
+<!--                <property name="id" value="2"/>-->
+<!--                <property name="email" value="12465"/>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--        <property name="list">-->
+<!--            <list>-->
+<!--                <value>足球</value>-->
+<!--                <value>篮球</value>-->
+<!--                <value>乒乓球</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="array">-->
+<!--            <array>-->
+<!--                <value>足球</value>-->
+<!--                <value>篮球</value>-->
+<!--                <value>乒乓球</value>-->
+<!--            </array>-->
+<!--        </property>-->
+<!--        <property name="set">-->
+<!--            <set>-->
+<!--                <value>足球</value>-->
+<!--                <value>篮球</value>-->
+<!--                <value>乒乓球</value>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--               <entry>-->
+<!--                   <key><value>football</value></key>-->
+<!--                   <value>足球</value>-->
+<!--               </entry>-->
+<!--                <entry>-->
+<!--                    <key><value>pingpangball</value></key>-->
+<!--                    <value>乒乓球</value>-->
+<!--                </entry>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--        <property name="properties">-->
+<!--            <props>-->
+<!--                <prop key="football">足球</prop>-->
+<!--                <prop key="pingpang">乒乓球</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--        <property name="empty">-->
+<!--            <value></value>-->
+<!--        </property>-->
+<!--        <property name="nullValue">-->
+<!--            <null/>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--</beans>-->

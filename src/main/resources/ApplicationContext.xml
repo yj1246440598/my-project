@@ -1,0 +1,32 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--       http://www.springframework.org/schema/beans/spring-beans.xsd"-->
+<!--&gt;-->
+<!--    &lt;!&ndash; bean标签声明Spring创建的对象实例，id属性指定对象唯一标识符，class指向被声明的实例类的对象&ndash;&gt;-->
+<!--    <bean id="helloSpring" name="helloSpring2" class="SomeTest.spring.HelloSpring">-->
+<!--        &lt;!&ndash;指定被赋值的属性&ndash;&gt;-->
+<!--        <property name="hello">-->
+<!--            &lt;!&ndash;赋值的内容&ndash;&gt;-->
+<!--            <value>你好呀</value>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="PersonTest" class="SomeTest.spring.PersonTest">-->
+<!--        <property name="helloSpring" ref="helloSpring"/>-->
+<!--        <property name="name" value="张三"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="FactoryMethodTestId" class="SomeTest.spring.FactoryMethodTest" factory-method="createHello"/>-->
+
+
+<!--    <bean id="FactoryBeanTestId" class="SomeTest.spring.FactoryBeanTest"/>-->
+<!--    <bean id="hello" factory-bean="FactoryBeanTestId" factory-method="create"/>-->
+
+<!--    <bean id="ConstorArgTest" class="SomeTest.spring.ConstorArgTest">-->
+<!--        <constructor-arg name="name" value="我的"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="MyFactoryBean" class="SomeTest.spring.MyFactoryBean"/>-->
+<!--</beans>-->
