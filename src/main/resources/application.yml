@@ -23,3 +23,6 @@ mybatis:
     map-underscore-to-camel-case: true
 #  config-location: classpath:mybatis-config.xml
   type-aliases-package: com.enjoy.entity
+my-config:
+  image:
+    path: /data/my/

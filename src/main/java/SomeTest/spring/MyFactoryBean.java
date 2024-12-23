@@ -1,6 +1,7 @@
 package SomeTest.spring;
 
 import org.springframework.beans.factory.FactoryBean;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyFactoryBean implements FactoryBean<HelloSpring> {

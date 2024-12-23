@@ -1,16 +1,13 @@
 package com.enjoy.controller;
 
+import com.enjoy.listener.MyTestEventPub;
 import com.enjoy.mapper.CourseMapper;
 import com.enjoy.service.ExcuterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.rowset.SqlRowSet;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.Map;
 
 @Controller
 @RequestMapping("/course")
@@ -18,6 +15,8 @@ public class CourseController {
     @Autowired
     private CourseMapper courseMapper;
 
+    @Autowired
+    private MyTestEventPub myTestEventPub;
     @Autowired
     private JdbcTemplate jdbcTemplate;
     @Autowired
@@ -34,6 +33,7 @@ public class CourseController {
 //        }
 //        System.out.println(courseMapper.selectAll());
         excuterService.print();
+        myTestEventPub.pub("你好");
         return "ok";
     }
 
