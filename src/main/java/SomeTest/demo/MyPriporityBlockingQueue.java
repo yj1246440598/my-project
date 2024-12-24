@@ -1,4 +1,4 @@
-package com.enjoy.demo;
+package SomeTest.demo;
 
 import java.util.concurrent.PriorityBlockingQueue;
 

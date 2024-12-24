@@ -26,7 +26,8 @@ import java.util.UUID;
 @RequestMapping("/images")
 public class ImageController {
 
-    private static final String UPLOAD_DIR = "uploads/";
+    @Autowired
+    private com.enjoy.config.Image imageConfig;
 
     @Autowired
     private ImageRepository imageRepository;
@@ -34,7 +35,7 @@ public class ImageController {
     @PostMapping("/upload")
     public String uploadPage(@RequestParam("file") MultipartFile file, Model model) {
         String filename = UUID.randomUUID().toString();
-        Path path = Paths.get(UPLOAD_DIR + filename + ".jpg");
+        Path path = Paths.get(imageConfig.getPath() + filename + ".jpg");
         try {
             Files.createDirectories(path.getParent());
             file.transferTo(path);
@@ -45,7 +46,7 @@ public class ImageController {
             image.setExpirationTime(LocalDateTime.now().plusMinutes(1));
             Image save = imageRepository.save(image);
             model.addAttribute("message", "Image_Uploaded_SuccessFully");
-            model.addAttribute("imageUrl", UPLOAD_DIR + filename);
+            model.addAttribute("imageUrl", imageConfig.getPath() + filename);
             model.addAttribute("imageId", save.getId());
         } catch (IOException e) {
             model.addAttribute("message", "Failed  to  upload  image:" + e.getMessage());

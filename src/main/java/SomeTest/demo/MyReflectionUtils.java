@@ -1,4 +1,4 @@
-package com.enjoy.demo;
+package SomeTest.demo;
 
 import com.enjoy.entity.Image;
 import com.enjoy.enums.ImageType;

@@ -1,6 +1,4 @@
-package com.enjoy.demo;
-
-import org.springframework.util.ReflectionUtils;
+package SomeTest.demo;
 
 import java.util.Random;
 import java.util.concurrent.SynchronousQueue;

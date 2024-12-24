@@ -1,11 +1,8 @@
 package com.enjoy.controller;
 
 import com.enjoy.entity.Result;
-import com.enjoy.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+import com.enjoy.entity.Users;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,7 +19,7 @@ public class UserController {
     @RequestMapping("/user")
     @PutMapping
     @ResponseBody
-    public Result<Void> edit(@Valid @RequestBody User userDTO,BindingResult bindingResult) {
+    public Result<Void> edit(@Valid @RequestBody Users userDTO, BindingResult bindingResult) {
         // 判断参数校验是否通过
         if (bindingResult.hasErrors()) {
             List<String> errors = new ArrayList<>();
@@ -41,7 +38,7 @@ public class UserController {
     @RequestMapping("/user2")
     @PutMapping
     @ResponseBody
-    public Result<Void> edit2(@Valid @RequestBody User userDTO) {
+    public Result<Void> edit2(@Valid @RequestBody Users userDTO) {
         // 如果校验通过，就执行对应的业务逻辑
         System.out.println("V2-模拟修改操作：" + userDTO);
         return Result.success("用户信息编辑成功！");

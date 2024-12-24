@@ -12,9 +12,9 @@ public class MyHandlerInterceptor implements HandlerInterceptor {
         String remoteAddr = request.getRemoteAddr();
         System.out.println(remoteAddr);
         //这里本地就不能用127.0.0.1的方式进入了
-        if (remoteAddr.equals("127.0.0.1")){
-            return false;
-        }
+//        if (remoteAddr.equals("127.0.0.1")){
+//            return false;
+//        }
         return true;
     }
 

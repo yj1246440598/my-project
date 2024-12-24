@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 @Entity
-
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
