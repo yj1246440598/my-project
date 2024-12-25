@@ -2,6 +2,7 @@ package com.enjoy.config;
 
 import com.enjoy.interceptor.MyHandlerInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
@@ -57,21 +59,15 @@ public class WebConfig implements WebMvcConfigurer {
         configurer.enable();
     }
 
-//    @Bean
-//    public InternalResourceViewResolver resourceViewResolver(){
-//        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-//        //请求视图文件的前缀地址
-//        internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");
-//        //请求视图文件的后缀
-//        internalResourceViewResolver.setSuffix(".jsp");
-//        return internalResourceViewResolver;
-//    }
-//
-//    @Override
-//    public void configureViewResolvers(ViewResolverRegistry registry) {
-//        registry.viewResolver(resourceViewResolver());
-////        registry.jsp("/WEB-INF/jsp/","jsp");
-//    }
+    @Bean
+    public InternalResourceViewResolver resourceViewResolver(){
+        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
+        //请求视图文件的前缀地址
+        internalResourceViewResolver.setPrefix("classpath:/templates/");
+        //请求视图文件的后缀
+        internalResourceViewResolver.setSuffix(".html");
+        return internalResourceViewResolver;
+    }
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
